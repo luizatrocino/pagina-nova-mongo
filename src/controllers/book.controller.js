@@ -11,10 +11,10 @@ const BoookController = {
         const uploadPath = await cloudinary.uploads(path, 'books')
       //   // return res.send(url)
       fs.unlinkSync(path)
-      const newBook = await Books.create({
-        ...req.body,
-        url: uploadPath.url
-      });
+      // const newBook = await Books.create({
+      //   ...req.body,
+      //   url: uploadPath.url
+      // });
 
       return res.status(201).json(newBook);
     } catch (error) {
